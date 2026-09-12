@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600;700&display=swap');
 
 :root {
-    --bg-main: #09090b;
-    --bg-card: #18181b;
-    --border-color: #3f3f46;
-    --text-primary: #f4f4f5;
-    --text-secondary: #a1a1aa;
+    --bg-main: #000000;
+    --text-primary: #ffffff;
+    --text-secondary: #aaaaaa;
     --accent-color: #ffffff;
+    --error-color: #ffffff;
 }
 
 * {
@@ -19,148 +18,123 @@ body {
     font-family: 'Fira Code', monospace;
     background-color: var(--bg-main);
     color: var(--text-primary);
-    line-height: 1.6;
+    line-height: 1.4;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    padding: 1rem 2rem;
 }
 
 .header {
     width: 100%;
-    padding: 2rem 2rem;
     text-align: left;
-    border-bottom: 1px solid var(--border-color);
-    background: var(--bg-main);
-}
-
-.header-content {
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-bottom: 1.5rem;
 }
 
 .header-content h1 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: var(--accent-color);
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    color: var(--text-primary);
+    margin-bottom: 0.2rem;
 }
 
-.header-content h1::before {
-    content: "SYS_DASHBOARD // ";
-    color: var(--text-secondary);
-}
+
 
 .subtitle {
     color: var(--text-secondary);
     font-size: 0.9rem;
     font-weight: 400;
 }
+.subtitle::before {
+    content: "[INFO] ";
+    color: var(--accent-color);
+}
 
 .dashboard {
     width: 100%;
     max-width: 1200px;
-    padding: 2rem 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    padding: 1.5rem;
-    transition: border-color 0.2s ease;
-}
-
-.card:hover {
-    border-color: var(--text-secondary);
+    background: transparent;
+    border: none;
+    padding: 0;
 }
 
 .card h2 {
     font-size: 1rem;
     font-weight: 600;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     color: var(--accent-color);
-    border-bottom: 1px solid var(--border-color);
-    padding-bottom: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .card h2::before {
-    content: "■ ";
+    content: "==> ";
     color: var(--text-secondary);
-    font-size: 0.8em;
-    vertical-align: middle;
+    font-weight: 600;
 }
 
 .grid-data {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
 .data-row {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: flex-start;
-    padding: 0.5rem 0;
-    border-bottom: 1px dashed var(--border-color);
-}
-
-.data-row:last-child {
-    border-bottom: none;
+    padding: 0;
 }
 
 .data-label {
     color: var(--text-secondary);
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+}
+
+.data-label::after {
+    content: ":";
 }
 
 .data-value {
     font-weight: 400;
     color: var(--text-primary);
     font-size: 0.9rem;
-    text-align: right;
-    max-width: 60%;
+    text-align: left;
     word-break: break-word;
 }
 
 .nested-group {
-    padding-left: 1rem;
-    border-left: 1px solid var(--border-color);
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    margin-top: 0;
+    margin-bottom: 0;
     width: 100%;
 }
 
 .loading, .error {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5rem;
-    text-align: center;
+    align-items: flex-start;
+    margin-top: 2rem;
 }
 
 .spinner {
-    width: 15px;
-    height: 15px;
-    margin-bottom: 1rem;
-    background-color: var(--accent-color);
-    animation: blink 1s step-end infinite;
+    display: none;
 }
 
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+.loading p {
+    color: var(--text-secondary);
 }
 
+.loading p::before {
+    content: "[WAIT] ";
+    color: var(--accent-color);
+}
 .loading p::after {
     content: '...';
     display: inline-block;
@@ -177,7 +151,8 @@ body {
 }
 
 .error h2 {
-    color: #fca5a5;
+    color: var(--error-color);
+    font-size: 1rem;
     margin-bottom: 0.5rem;
 }
 
@@ -186,18 +161,5 @@ body {
 }
 
 .error p {
-    color: var(--text-secondary);
-}
-
-@media (max-width: 768px) {
-    .dashboard {
-        grid-template-columns: 1fr;
-        padding: 1rem;
-    }
-    .header {
-        padding: 1.5rem 1rem;
-    }
-    .header-content h1 {
-        font-size: 1.2rem;
-    }
+    color: var(--text-primary);
 }
