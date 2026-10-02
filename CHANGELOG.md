@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/kleinnconrad/small-scale-rc-speedrun/compare/v1.1.1...v1.2.0) (2026-10-02)
+
+
+### Features
+
+* add setup sheet version 2 ([0fdc470](https://github.com/kleinnconrad/small-scale-rc-speedrun/commit/0fdc470395b102294b9d4869526db2837aa97cb3))
+
+
+### Bug Fixes
+
+* add pip install pyyaml to update dashboard action ([e72e650](https://github.com/kleinnconrad/small-scale-rc-speedrun/commit/e72e650406f3f71cc41241baf161365e8b7565fb))
+
 ## [1.1.1](https://github.com/kleinnconrad/small-scale-rc-speedrun/compare/v1.1.0...v1.1.1) (2026-09-05)
 
 
