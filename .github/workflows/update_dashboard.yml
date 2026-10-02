@@ -24,6 +24,9 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Install dependencies
+        run: pip install pyyaml
+
       - name: Run Update Script
         run: python scripts/update_latest_setup.py
 
@@ -40,3 +43,4 @@ jobs:
           else
             echo "No changes to docs/latest_setup.json detected."
           fi
+          
