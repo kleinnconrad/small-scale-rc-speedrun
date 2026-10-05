@@ -9,7 +9,7 @@ The artefacts of this repository are:
 * System specification in the `specs/full_spec.yml` file
 * Vehicle setup configurations in the `/setup_sheets` directory
 
-<img src="https://raw.githubusercontent.com/kleinnconrad/small-scale-rc-speedrun/main/photos/PXL_20260903_135619761.jpg" alt="RC Car Photo 1" width="49%"> <img src="https://raw.githubusercontent.com/kleinnconrad/small-scale-rc-speedrun/main/photos/PXL_20260903_135638335.jpg" alt="RC Car Photo 2" width="49%">
+<img src="photos/PXL_20261005_112700039.jpg" alt="RC Car Photo 1" width="49%"> <img src="photos/PXL_20261005_112749664.jpg" alt="RC Car Photo 2" width="49%">
 
 ## Table of contents
 * [Repository structure](#repository-structure)
