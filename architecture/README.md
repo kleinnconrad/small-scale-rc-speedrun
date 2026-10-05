@@ -13,7 +13,7 @@ This directory contains all fundamental architecture and hardware decisions for 
 | **ADR-005** | 2026-08-20 | Selection of the remote control system for 100 km/h speedruns | 🟢 decided | X9S Radio + Mini Waterproof 4-Channel Receiver RG4CHWP |
 | **ADR-006** | 2026-08-21 | Selection of the steering servo for precise high-speed control | 🟢 decided | Savöx SC-1252MG+ |
 | **ADR-007** | 2026-03-06 | Selection of active and passive motor cooling for 3S speedruns | 🟢 decided | Passive 36mm Alu Heat Sink combined with active 40x40mm High-Speed Alu Fan |
-| **ADR-008** | 2026-02-25 | Selection of tires for 100 km/h speedruns | 🟢 Decided | Team Corally C-14705-35 Attack Moosgummi Reifen - 1/10 GP Toerenwagen - 35 shore |
+| **ADR-008** | 2026-10-05 | Selection of tires for 100 km/h speedruns | 🟢 Decided | Team Corally C-14705-35 Attack Moosgummi Reifen - 1/10 GP Toerenwagen - 35 shore |
 | **ADR-009** | 2026-03-12 | Selection of the aerodynamic body for 100 km/h speedruns | 🟢 decided | ZooRacing Hellcat (190 mm, 0.7mm thickness) |
 | **ADR-010** | 2026-03-10 | Selection of the GPS measuring system to validate the 100 km/h mark | 🟢 decided | Ruddog GPS Performance Analyzer |
 | **ADR-011** | 2026-08-30 | Selection of Gyro for vehicle stabilization | 🟢 Decided | SkyRC GC301 Gyro |
@@ -288,7 +288,7 @@ mini heat sink.
 ---
 
 ### ADR-008: Selection of tires for 100 km/h speedruns
-**Status:** Decided | **Date:** 2026-02-25
+**Status:** Decided | **Date:** 2026-10-05
 
 #### Context
 At a target speed of 100 km/h and the associated high 
