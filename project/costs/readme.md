@@ -26,7 +26,7 @@
 | 12 | **tool** | tamiya 86012 - PS-12 silver (100ml) | 17-86012 | RC-KleinKram | 1 | 8,99 € |
 | 13 | **tool** | tamiya 86005 - PS-5 black (100ml) | 17-86005 | RC-KleinKram | 1 | 8,99 € |
 | 14 | **tool** | bittydesign BDSS-37855-C curved scissors | 18-BDSS-37855-C | RC-KleinKram | 1 | 10,99 € |
-| 15 | **wheels & tires** | sweep HANKOOK tread belted tires pre-glued 36deg | SR-SSF-36AWPG | LMI-racing | 1 | 29,99 € |
+| 15 | **wheels & tires** | Team Corally Attack Moosgummi Reifen 35 shore front & rear | C-14705-35 | - | 2 | 31,98 € |
 | 16 | **telemetry** | ruddog GPS/GNSS speed & performance analyzer | RP-0525 | RCFOX | 1 | 54,85 € |
 | 17 | **ESC programming** | hobbywing programming box LED universal | HW30501003 | modellbau metz | 1 | 11,49 € |
 | 18 | **control** | X9S radio + RG4CHWP receiver | KN-X9S-4CH | RCFOX | 1 | 152,00 € |
@@ -43,6 +43,6 @@
 
 | Description | amount |
 |:---|---:|
-| **Pure vehicle costs:** | **660,49 €** |
+| **Pure vehicle costs:** | **662,48 €** |
 | Costs for tools, infrastructure & spare parts (pos. 2, 7, 8, 9, 11-14, 16, 17, 21): | 402,10 € |
-| **Total costs:** | **1062,59 €** |
+| **Total costs:** | **1064,58 €** |

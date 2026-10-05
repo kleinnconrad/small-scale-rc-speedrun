@@ -37,16 +37,19 @@ adr:
       fabric belt completely prevents ballooning. The harder 36-shore compound
       is approved for asphalt. The tread forgives light road dust much
       better than a pure slick.
-  decision: Sweep HANKOOK Tread Belted tires Pre-glued set Pro-compound 36deg for
-    Asphalt (SR-SSF-36AWPG)
+  - option_id: 6
+    name: Team Corally C-14705-35 Attack Moosgummi Reifen
+    type: Foam rubber tire / High-Grip
+    evaluation: Foam tires do not expand due to centrifugal forces. They provide significantly improved stability and grip for speedruns compared to belted tires, which makes a big difference at high speeds.
+  decision: Team Corally C-14705-35 Attack Moosgummi Reifen - 1/10 GP Toerenwagen - 35 shore
   tires_meta:
-    brand: Sweep Racing
-    model: HANKOOK Tread Belted tires Pre-glued set Pro-compound 36deg for Asphalt
-    type: Fabric-reinforced rubber tires (Belted)
+    brand: Team Corally
+    model: Attack Moosgummi Reifen (C-14705-35)
+    type: Foam rubber tires
     hex_size: 12mm
-    width: 24mm
-    surface: Asphalt (uncleaned / everyday)
-  rationale: "The decision is made in favor of the pre-glued Sweep HANKOOK Tread \nBelted tires with \nthe harder 36-shore asphalt compound. Although a treadless \nfull slick physically \noffers the absolute top performance and maximum smoothness \nat 100 km/h, in real \nuse on not optimally swept \nparking lots, it is too sensitive to fine dust (loss \nof traction). The \nHankook tread can transport away light dirt and offers \nthe safer and more good-natured driving behavior on normal asphalt. \nAt the same time, \nthe essential \nKevlar fabric (belt) guarantees absolute safety against critical expansion.\n"
+    width: "30mm (rear), 26mm (front)"
+    surface: Asphalt
+  rationale: "While belted tires avoid ballooning, they do not provide sufficient stability and grip for speedruns. Changing to foam rubber tires significantly improves both stability and grip at high speeds. Thus, the decision was revised to use the Team Corally 35 shore foam tires."
   consequences:
   - 'Pre-check: Even factory pre-glued tires must absolutely be checked
     for manufacturing defects on the glue seam before the first run (pull briefly on the tire sidewall).'

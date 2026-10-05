@@ -13,7 +13,7 @@ This directory contains all fundamental architecture and hardware decisions for 
 | **ADR-005** | 2026-08-20 | Selection of the remote control system for 100 km/h speedruns | 🟢 decided | X9S Radio + Mini Waterproof 4-Channel Receiver RG4CHWP |
 | **ADR-006** | 2026-08-21 | Selection of the steering servo for precise high-speed control | 🟢 decided | Savöx SC-1252MG+ |
 | **ADR-007** | 2026-03-06 | Selection of active and passive motor cooling for 3S speedruns | 🟢 decided | Passive 36mm Alu Heat Sink combined with active 40x40mm High-Speed Alu Fan |
-| **ADR-008** | 2026-02-25 | Selection of tires (belted rubber tires for asphalt) for 100 km/h speedruns | 🟢 Decided | Sweep HANKOOK Tread Belted tires Pre-glued set Pro-compound 36deg for Asphalt (SR-SSF-36AWPG) |
+| **ADR-008** | 2026-02-25 | Selection of tires (belted rubber tires for asphalt) for 100 km/h speedruns | 🟢 Decided | Team Corally C-14705-35 Attack Moosgummi Reifen - 1/10 GP Toerenwagen - 35 shore |
 | **ADR-009** | 2026-03-12 | Selection of the aerodynamic body for 100 km/h speedruns | 🟢 decided | ZooRacing Hellcat (190 mm, 0.7mm thickness) |
 | **ADR-010** | 2026-03-10 | Selection of the GPS measuring system to validate the 100 km/h mark | 🟢 decided | Ruddog GPS Performance Analyzer |
 | **ADR-011** | 2026-08-30 | Selection of Gyro for vehicle stabilization | 🟢 Decided | SkyRC GC301 Gyro |
@@ -312,24 +312,10 @@ the tire tread (slick vs. grooved).
 
 
 #### Decision
-> **Sweep HANKOOK Tread Belted tires Pre-glued set Pro-compound 36deg for Asphalt (SR-SSF-36AWPG)**
+> **Team Corally C-14705-35 Attack Moosgummi Reifen - 1/10 GP Toerenwagen - 35 shore**
 
 #### Rationale
-The decision is made in favor of the pre-glued Sweep HANKOOK Tread 
-Belted tires with 
-the harder 36-shore asphalt compound. Although a treadless 
-full slick physically 
-offers the absolute top performance and maximum smoothness 
-at 100 km/h, in real 
-use on not optimally swept 
-parking lots, it is too sensitive to fine dust (loss 
-of traction). The 
-Hankook tread can transport away light dirt and offers 
-the safer and more good-natured driving behavior on normal asphalt. 
-At the same time, 
-the essential 
-Kevlar fabric (belt) guarantees absolute safety against critical expansion.
-
+While belted tires avoid ballooning, they do not provide sufficient stability and grip for speedruns. Changing to foam rubber tires significantly improves both stability and grip at high speeds. Thus, the decision was revised to use the Team Corally 35 shore foam tires.
 
 #### Consequences
 - Pre-check: Even factory pre-glued tires must absolutely be checked for manufacturing defects on the glue seam before the first run (pull briefly on the tire sidewall).

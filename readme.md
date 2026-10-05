@@ -136,6 +136,7 @@ This section documents the findings from previous tests & speedruns in 1:10 scal
 | **[L] Aerodynamics**<br>A wedge shape of the vehicle is necessary for efficient aerodynamics. To achieve this, the front body posts must be shortened as much as possible. |
 | **[M] C-hub assembly**<br>The mounting screws of the C-hubs were loosened to eliminate mechanical resistance. Excessive tightening prevents the steering from moving freely, resulting in the previously described issue of an inaccurate servo neutral return. |
 | **[M] Servo saver**<br>The servo saver was removed and an aluminum servo horn was mounted directly. This increases the risk of damage to the servo in the event of a crash. The servo saver was identified as a source of failure (steering oscillation) during speedruns. |
+| **[L] Tires**<br>Belted tires avoid ballooning but do not provide sufficient stability and grip for speedruns. The use of foam rubber tires increases stability and grip. |
 
 *(Legend: **[L]** = learning, **[M]** = modification)*
 
