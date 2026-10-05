@@ -2,7 +2,7 @@ adr:
   id: ADR-008
   title: Selection of tires for 100 km/h speedruns
   status: Decided
-  date: '2026-02-25'
+  date: '2026-10-05'
   context: "At a target speed of 100 km/h and the associated high \nspeeds \nof the wheels, standard rubber tires expand massively in the middle due to centrifugal force \n(the so-called \"pizza cutter effect\" or \"ballooning\"\n). This leads to an immediate \nloss of control and often to the tire bursting. \nPre-glued tires \non rims with a 12mm hex hub \n(suitable for the Carten T410R chassis) are required, \nwhich retain their shape 100% under high centrifugal forces \nand whose rubber compound \nwithstands the high friction heat on rough \nasphalt. \nIn addition, the real track conditions (not \ndust-free normal asphalt vs. \ncleanly prepared race track) must be considered when choosing \nthe tire tread (slick vs. grooved). \n\n"
   considered_alternatives:
   - option_id: 1
