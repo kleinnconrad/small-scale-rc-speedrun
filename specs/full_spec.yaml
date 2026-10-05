@@ -1,63 +1,110 @@
-Battery:
+Glitch Buster:
   meta:
-    brand: Absima
-    series: GreenHorn Line V2
-    part_number: '4140014'
-    type: LiPo (Lithium-Polymer)
+    brand: Ruddog
+    model: Glitch Buster
+    type: Receiver Capacitor / Voltage Stabilizer
+    features: Prevents voltage drops and receiver brown-outs
+    price_class: Low-Budget (~5 EUR)
   properties:
-    electrical_specifications:
-      voltage: 11.1V (Nominal voltage)
-      cells: 3S
-      capacity: 5000 mAh
-      energy: 55.5 Wh
-      discharge_rate_continuous: 50C
-      max_continuous_amp_draw: 250A
-    connectors:
-      main_power: XT60 (Plug & Play with Hobbywing QuicRun G2 ESC)
-      balancer: XH (Standard balancer for the charger)
-    physical_specifications:
-      case_type: Hardcase (HC) - Hard plastic box
-      safety: Absolutely necessary for speedruns to protect against driveshaft/crashes
-      weight_g: 370
-      dimensions:
-        length_mm: 138
-        width_mm: 46
-        height_mm: 35
-Charger:
+    mechanical_specifications:
+      connector: Standard JR/Futaba servo plug
+      case: Shrink-wrapped electrolytic capacitor
+    performance_specifications:
+      function: Buffers the BEC (Battery Eliminator Circuit) voltage to prevent sudden
+        drops caused by high current draw from the steering servo.
+      compatibility: Universally compatible with all standard RC receivers.
+    installation:
+      mounting: Plugs directly into any available free port on the receiver (e.g.,
+        CH4, AUX, or BATT).
+      application: Highly recommended when using a gyro, as the constant micro-adjustments
+        and counter-steering commands can lead to high-frequency current spikes, causing
+        voltage fluctuations and subsequent servo jitter or receiver reboots.
+Gyro:
   meta:
     brand: SkyRC
-    model: S100neo
-    type: Smart AC/DC Charger
-    architecture_fit: optimal. Has XT60 socket built directly into the housing. No
-      adapter chaos.
+    model: GC301
+    type: Steering Gyro
+    features: Adjustable steering gain, remote gain support
+    price_class: Budget / Entry-Level (~25 EUR)
   properties:
-    power_specifications:
-      input_voltage_ac: 100-240V (Integrated power supply for normal socket)
-      input_voltage_dc: 6-30V
-      charge_power_max_ac: 100W
-      charge_power_max_dc: 200W
-      discharge_power_max: 5W (Main port) / 20W (Balance port)
-    charging_capabilities:
-      supported_chemistries:
-      - LiPo
-      - LiIon
-      - LiFe
-      - LiHV
-      - NiMH
-      - NiCd
-      - Pb
-      supported_cells_lipo: 1S to 6S
-      charge_current_range: 0.1A - 12.0A
-      discharge_current_range: 0.1A - 2.0A
-      balancer_current_max: 1.0A
-    physical_specifications:
-      display: Color LCD Screen
+    mechanical_specifications:
+      case: Plastic
       dimensions_mm:
-        length: 105
-        width: 105
-        height: 62
-      weight_g: 340
-      control_interface: Simple 3-button control
+        length: 21.0
+        width: 21.0
+        height: 11.0
+      weight_g: 3.6
+    performance_specifications:
+      operating_voltage: 4.0V - 8.4V
+      current_drain: 25mA
+      operating_temperature: -10°C to +45°C
+    installation:
+      mounting: Must be securely mounted flat and parallel to the chassis longitudinal
+        axis using double-sided tape to avoid false readings from vibrations.
+      wiring: Connects between the steering servo and the receiver (CH1).
+      gain_control: Can be adjusted remotely via an auxiliary channel (CH3) or manually
+        via the physical potentiometer on the gyro.
+Gps:
+  meta:
+    type: GNSS Performance Analyzer (GPS/GLONASS)
+    reference_model: Ruddog GPS Performance Analyzer
+    measuring_frequency: 10 Hz (10 Updates per second - critical for RC speedruns!)
+    interface: Bluetooth 4.0 (Readout via iOS/Android App)
+    power_supply: Integrated LiPo battery (chargeable via USB)
+    weight: approx. 38 Grams
+    shopping_item:
+      add_to_list: true
+      item_name: Ruddog GPS Performance Analyzer
+      category: Testing & Validation
+      reference_link: Search at RC model specialist dealer (e.g. RC-KleinKram, Tamico,
+        Monster Hopups)
+      estimated_price_eur: 50
+  properties:
+    app_integration:
+      software: RC Gears / Ruddog App (or identical SkyRC App)
+      functions: Top-Speed measurement, 0-100 km/h time measurement, Track-Logging
+    mounting_and_setup:
+      positioning: 'Must be mounted in a location that has a clear view of the sky.
+        Carbon components (like the upper deck of the Carten) shield the satellite
+        signal! Best mounting location: On the front foam bumper.'
+      fixation: The module must absolutely be secured with velcro AND an additional
+        cable tie or tape during speedruns. The G-forces during a crash are enormous.
+      operation: The module flashes during the satellite search. Only start driving
+        when the GPS signal is confirmed as 'Locked' (usually by a solid light), otherwise
+        the first meters are missing from the measurement.
+Servo:
+  meta:
+    brand: Savöx
+    model: SC-1252MG+
+    type: Digital Low-Profile Servo
+    features: Coreless Motor, high speed and precision
+    price_class: Mid-Range (~52.72 EUR)
+  properties:
+    mechanical_specifications:
+      gears: Metal gears
+      case: Plastic with aluminum middle section
+      spline_teeth: 25T (Standard Futaba/Savöx)
+      dimensions_mm:
+        length: 40.8
+        width: 20.2
+        height: 25.4
+      weight_g: 44.0
+    performance_specifications:
+      operating_voltage: 4.8V - 6.0V
+      torque_6v: 7.0 kg-cm
+      speed_6v: 0.07 sec / 60°
+      return_to_center_accuracy: Very good (High precision for reproducible straight-line
+        stability)
+    mandatory_upgrades:
+      part: ALU CLAMP SERVO HORN - FUTABA, SAVÖX - 3-HOLE - 25T (HUD293409)
+      reason: Guarantees an absolutely rigid, play-free steering connection. A servo
+        saver is completely omitted to achieve maximum accuracy.
+      installation: Tighten the clamp screw and definitely fix the main screw with
+        threadlocker (e.g. Loctite medium strength).
+    transmitter_setup:
+      dual_rate: For the 100 km/h run, the 'Dual Rate' (D/R) or the steering throw
+        (EPA) must absolutely be reduced on the remote control. Minimal steering movements
+        are sufficient at top speed.
 Brushless Combo:
   meta:
     description: Specification of the brushless powertrain for 100 km/h on 3S.
@@ -109,80 +156,6 @@ Brushless Combo:
         the receiver)'
       shopping_item:
         add_to_list: false
-Gps:
-  meta:
-    type: GNSS Performance Analyzer (GPS/GLONASS)
-    reference_model: Ruddog GPS Performance Analyzer
-    measuring_frequency: 10 Hz (10 Updates per second - critical for RC speedruns!)
-    interface: Bluetooth 4.0 (Readout via iOS/Android App)
-    power_supply: Integrated LiPo battery (chargeable via USB)
-    weight: approx. 38 Grams
-    shopping_item:
-      add_to_list: true
-      item_name: Ruddog GPS Performance Analyzer
-      category: Testing & Validation
-      reference_link: Search at RC model specialist dealer (e.g. RC-KleinKram, Tamico,
-        Monster Hopups)
-      estimated_price_eur: 50
-  properties:
-    app_integration:
-      software: RC Gears / Ruddog App (or identical SkyRC App)
-      functions: Top-Speed measurement, 0-100 km/h time measurement, Track-Logging
-    mounting_and_setup:
-      positioning: 'Must be mounted in a location that has a clear view of the sky.
-        Carbon components (like the upper deck of the Carten) shield the satellite
-        signal! Best mounting location: On the front foam bumper.'
-      fixation: The module must absolutely be secured with velcro AND an additional
-        cable tie or tape during speedruns. The G-forces during a crash are enormous.
-      operation: The module flashes during the satellite search. Only start driving
-        when the GPS signal is confirmed as 'Locked' (usually by a solid light), otherwise
-        the first meters are missing from the measurement.
-Glitch Buster:
-  meta:
-    brand: Ruddog
-    model: Glitch Buster
-    type: Receiver Capacitor / Voltage Stabilizer
-    features: Prevents voltage drops and receiver brown-outs
-    price_class: Low-Budget (~5 EUR)
-  properties:
-    mechanical_specifications:
-      connector: Standard JR/Futaba servo plug
-      case: Shrink-wrapped electrolytic capacitor
-    performance_specifications:
-      function: Buffers the BEC (Battery Eliminator Circuit) voltage to prevent sudden
-        drops caused by high current draw from the steering servo.
-      compatibility: Universally compatible with all standard RC receivers.
-    installation:
-      mounting: Plugs directly into any available free port on the receiver (e.g.,
-        CH4, AUX, or BATT).
-      application: Highly recommended when using a gyro, as the constant micro-adjustments
-        and counter-steering commands can lead to high-frequency current spikes, causing
-        voltage fluctuations and subsequent servo jitter or receiver reboots.
-Gyro:
-  meta:
-    brand: SkyRC
-    model: GC301
-    type: Steering Gyro
-    features: Adjustable steering gain, remote gain support
-    price_class: Budget / Entry-Level (~25 EUR)
-  properties:
-    mechanical_specifications:
-      case: Plastic
-      dimensions_mm:
-        length: 21.0
-        width: 21.0
-        height: 11.0
-      weight_g: 3.6
-    performance_specifications:
-      operating_voltage: 4.0V - 8.4V
-      current_drain: 25mA
-      operating_temperature: -10°C to +45°C
-    installation:
-      mounting: Must be securely mounted flat and parallel to the chassis longitudinal
-        axis using double-sided tape to avoid false readings from vibrations.
-      wiring: Connects between the steering servo and the receiver (CH1).
-      gain_control: Can be adjusted remotely via an auxiliary channel (CH3) or manually
-        via the physical potentiometer on the gyro.
 Laser Tachometer:
   meta:
     type: Non-contact Laser Tachometer
@@ -203,6 +176,66 @@ Laser Tachometer:
       safety_warning: 'IMPORTANT: At 100 km/h wheel rotation speed, rubber tires expand
         significantly (ballooning). Wear safety goggles and do not stand directly
         in the centrifugal line of the wheels in case the tire glue fails!'
+Charger:
+  meta:
+    brand: SkyRC
+    model: S100neo
+    type: Smart AC/DC Charger
+    architecture_fit: optimal. Has XT60 socket built directly into the housing. No
+      adapter chaos.
+  properties:
+    power_specifications:
+      input_voltage_ac: 100-240V (Integrated power supply for normal socket)
+      input_voltage_dc: 6-30V
+      charge_power_max_ac: 100W
+      charge_power_max_dc: 200W
+      discharge_power_max: 5W (Main port) / 20W (Balance port)
+    charging_capabilities:
+      supported_chemistries:
+      - LiPo
+      - LiIon
+      - LiFe
+      - LiHV
+      - NiMH
+      - NiCd
+      - Pb
+      supported_cells_lipo: 1S to 6S
+      charge_current_range: 0.1A - 12.0A
+      discharge_current_range: 0.1A - 2.0A
+      balancer_current_max: 1.0A
+    physical_specifications:
+      display: Color LCD Screen
+      dimensions_mm:
+        length: 105
+        width: 105
+        height: 62
+      weight_g: 340
+      control_interface: Simple 3-button control
+Battery:
+  meta:
+    brand: Absima
+    series: GreenHorn Line V2
+    part_number: '4140014'
+    type: LiPo (Lithium-Polymer)
+  properties:
+    electrical_specifications:
+      voltage: 11.1V (Nominal voltage)
+      cells: 3S
+      capacity: 5000 mAh
+      energy: 55.5 Wh
+      discharge_rate_continuous: 50C
+      max_continuous_amp_draw: 250A
+    connectors:
+      main_power: XT60 (Plug & Play with Hobbywing QuicRun G2 ESC)
+      balancer: XH (Standard balancer for the charger)
+    physical_specifications:
+      case_type: Hardcase (HC) - Hard plastic box
+      safety: Absolutely necessary for speedruns to protect against driveshaft/crashes
+      weight_g: 370
+      dimensions:
+        length_mm: 138
+        width_mm: 46
+        height_mm: 35
 Remote Control:
   meta:
     brand: Konect
@@ -237,39 +270,6 @@ Remote Control:
         (center) before the ESC is calibrated.
       bec_voltage_warning: The BEC of the ESC must be matched with the input voltage
         of the receiver.
-Servo:
-  meta:
-    brand: Savöx
-    model: SC-1252MG+
-    type: Digital Low-Profile Servo
-    features: Coreless Motor, high speed and precision
-    price_class: Mid-Range (~52.72 EUR)
-  properties:
-    mechanical_specifications:
-      gears: Metal gears
-      case: Plastic with aluminum middle section
-      spline_teeth: 25T (Standard Futaba/Savöx)
-      dimensions_mm:
-        length: 40.8
-        width: 20.2
-        height: 25.4
-      weight_g: 44.0
-    performance_specifications:
-      operating_voltage: 4.8V - 6.0V
-      torque_6v: 7.0 kg-cm
-      speed_6v: 0.07 sec / 60°
-      return_to_center_accuracy: Very good (High precision for reproducible straight-line
-        stability)
-    mandatory_upgrades:
-      part: ALU CLAMP SERVO HORN - FUTABA, SAVÖX - 3-HOLE - 25T (HUD293409)
-      reason: Guarantees an absolutely rigid, play-free steering connection. A servo
-        saver is completely omitted to achieve maximum accuracy.
-      installation: Tighten the clamp screw and definitely fix the main screw with
-        threadlocker (e.g. Loctite medium strength).
-    transmitter_setup:
-      dual_rate: For the 100 km/h run, the 'Dual Rate' (D/R) or the steering throw
-        (EPA) must absolutely be reduced on the remote control. Minimal steering movements
-        are sufficient at top speed.
 Body:
   meta:
     brand: ZooRacing
@@ -293,6 +293,77 @@ Body:
         wing.
       rear_wing: Included high-downforce wing provides absolutely necessary rear stability
         at high speed.
+Tires:
+  meta:
+    brand: Team Corally
+    model: Attack Moosgummi Reifen (C-14705-35)
+    type: Foam rubber tire
+    tread: Slick
+    shore_hardness: 35°
+    wheel_hub: 12mm Hex - Suitable for kit hubs of the Carten T410R
+    assembly_status: Pre-glued (Industrially glued at the factory on spoke wheels)
+    shopping_item:
+      add_to_list: true
+      item_name: Team Corally C-14705-35 Attack Moosgummi Reifen - 1/10 GP Toerenwagen
+        - 35 shore
+      category: Wheels & Tires
+      reference_link: Search for Team Corally C-14705-35 at common RC shops
+      estimated_price_eur: 31.98
+  properties:
+    dimensions:
+      width_front_mm: 26
+      width_rear_mm: 30
+    setup_instructions:
+      ballooning_protection: Foam rubber tires physically do not expand at approx.
+        8,800 RPM (axle speed at 100 km/h). The aerodynamics of the ZooRacing Hellcat
+        and the ride height remain constantly safe.
+      wheel_nut_securing: Mandatory to use locknuts with an intact nylon ring (M4)
+        and tighten firmly. The brutal acceleration of the 3660 motor can spin off
+        loose nuts immediately.
+      balancing: Despite industrial production, tires can have slight imbalances.
+        In case of strong vibrations on the jacked-up chassis, balance the wheels
+        (e.g. with putty lead in the rim) so as not to destroy the wheel bearings
+        of the Carten T410R at 100 km/h.
+      break_in_scrubbing: The smooth production layer must first be worn off. Use
+        the first test runs to calibrate the ESC to build up the grip for the final
+        topspeed run.
+Tools:
+  meta:
+    description: Required tools for assembling the Carten T410R.
+  properties:
+    tool_list:
+      hex_wrenches:
+        type: Hex Wrenches
+        sizes: 1.5 mm, 2.0 mm, 2.5 mm
+        note: Mandatory purchase! Carten uses metric M3 machine screws throughout
+          the car (no self-tapping screws). A high-quality hex wrench is highly important
+          here, so as not to damage the screw heads and the hard plastic thread when
+          screwing in.
+        brand: Neewer
+        model: Titanium RC Hex Wrench Set (1.5/2.0/2.5/3.0)
+      box_wrenches:
+        type: RC Cross Wrench / Box Wrench
+        sizes: 5.5 mm and 7.0 mm
+        note: The 5.5 mm is needed permanently for all M3 nuts in the chassis. The
+          7.0 mm is for the wheel nuts. The 10.0 mm mentioned in the Carten manual
+          is not needed at all for this 1/10 model.
+        status: Available (No purchase necessary)
+      adhesives_and_chemicals:
+        threadlocker:
+          type: Screw Cement / Threadlocker
+          note: highly important! Goes on all screws that are screwed into metal (e.g.
+            motor pinion). Often incorrectly labeled as 'GLUE' in the Carten manual.
+            Never use for plastic!
+          brand: Loctite
+          model: 243 Medium Strength (Blue)
+      tapes:
+        glass_tape:
+          type: Glass Tape
+          note: Mandatory for the T410R! The car has no classic plastic battery holders.
+            According to the manual, the tape is pulled through the slots in the carbon
+            chassis to strap the LiPo battery down tightly.
+          brand: Arrowmax
+          model: Fibre Tape / Battery Tape
 Cartent410R:
   meta:
     brand: Carten
@@ -340,111 +411,6 @@ Cartent410R:
       steering:
         steering_system: Ball-bearing Dual-Bellcrank-System (Double arm)
         steering_knuckles_c_hubs: Composite plastic
-Tools:
-  meta:
-    description: Required tools for assembling the Carten T410R.
-  properties:
-    tool_list:
-      hex_wrenches:
-        type: Hex Wrenches
-        sizes: 1.5 mm, 2.0 mm, 2.5 mm
-        note: Mandatory purchase! Carten uses metric M3 machine screws throughout
-          the car (no self-tapping screws). A high-quality hex wrench is highly important
-          here, so as not to damage the screw heads and the hard plastic thread when
-          screwing in.
-        brand: Neewer
-        model: Titanium RC Hex Wrench Set (1.5/2.0/2.5/3.0)
-      box_wrenches:
-        type: RC Cross Wrench / Box Wrench
-        sizes: 5.5 mm and 7.0 mm
-        note: The 5.5 mm is needed permanently for all M3 nuts in the chassis. The
-          7.0 mm is for the wheel nuts. The 10.0 mm mentioned in the Carten manual
-          is not needed at all for this 1/10 model.
-        status: Available (No purchase necessary)
-      adhesives_and_chemicals:
-        threadlocker:
-          type: Screw Cement / Threadlocker
-          note: highly important! Goes on all screws that are screwed into metal (e.g.
-            motor pinion). Often incorrectly labeled as 'GLUE' in the Carten manual.
-            Never use for plastic!
-          brand: Loctite
-          model: 243 Medium Strength (Blue)
-      tapes:
-        glass_tape:
-          type: Glass Tape
-          note: Mandatory for the T410R! The car has no classic plastic battery holders.
-            According to the manual, the tape is pulled through the slots in the carbon
-            chassis to strap the LiPo battery down tightly.
-          brand: Arrowmax
-          model: Fibre Tape / Battery Tape
-Differentials:
-  meta:
-    type: Oil-filled bevel differential (Metal Gear)
-    mechanical_load_capacity: '> 100 km/h (approx. 8,300 RPM axle speed)'
-  properties:
-    material_and_construction:
-      gears_ring_and_bevel: Sintered metal / Steel
-      diff_outdrives_cup_joints: Hardened steel
-      diff_case_cup: Fiber-reinforced composite plastic
-    mandatory_modifications:
-      perfect_shimming:
-        issue: Freedom from play
-        description: The inner metal gears must be adjusted absolutely free of play
-          during assembly with ultra-thin shims. Only this way is it prevented that
-          the teeth skip or tear off under the high torque of the 3S motor.
-      reinforced_sealing:
-        issue: O-ring sealing
-        description: At 8,300 RPM, the oil inside generates a massive centrifugal
-          pressure outwards. The rubber O-rings must be sealed with viscous special
-          grease (e.g. 'Green Slime') so that the differential does not run dry.
-      oil_viscosity:
-        issue: Locking effect & straight-line stability
-        description: The kit oil is too soft and leads to uncontrollable breakouts
-          during speedruns if one wheel loses minimal grip. Highly viscous silicone
-          oil must be used to force the car into a stubborn straight-line drive.
-        setup_recommendation:
-          front_axle: approx. 100,000 cSt (or a completely rigid spool/solid axle)
-          rear_axle: approx. 10,000 cSt
-Driveshaft And Joints:
-  meta:
-    component: Central Drive Shaft (Center Shaft)
-  properties:
-    material_and_suitability:
-      driveshaft:
-        component: Driveshaft (Shaft)
-        material: Aluminum (anodized), hollow or solid (depending on batch)
-        suitability_100kmh_3s: YES. Aluminum is better here than steel, since the
-          lower rotating mass generates fewer vibrations at approx. 26,000 RPM.
-      joint_cups:
-        component: Connectors (Diff-Inputs)
-        material: Steel (Hardened)
-        suitability_100kmh_3s: YES. The mounts at the differential input are made
-          of steel and withstand the torque of the 3S drive.
-      rpm_load:
-        component: Speed load
-        specification: Shaft rotates at approx. 26,000 RPM
-        suitability_100kmh_3s: Critical, but doable for the kit part, as long as there
-          is no imbalance.
-    mandatory_durability_measures:
-      centering_floating_problem:
-        issue: Centering (The 'Floating' problem)
-        description: The shaft must not hit back and forth in the cups ('chatter').
-        action: Mandatory to place small O-rings or foam pads (often included in the
-          kit or cut from old shock rubbers) into the cups before the shaft is inserted.
-          The shaft must sit 'floating', but without play between the diffs.
-      joint_lubrication:
-        issue: Lubrication of the joints
-        description: The ends of the driveshaft (dogbones) that run in the steel cups
-          are metal on metal. With 3S power, massive wear occurs here ('hammering
-          in').
-        action: Lubricate these contact points with viscous molybdenum grease (black)
-          or special 'Joint Grease' to minimize friction.
-      runout_check:
-        issue: Check for concentricity
-        description: Roll the shaft over a glass plate (or a mirror) before installation.
-        action: If it 'wobbles' even minimally (is bent), it will set the entire chassis
-          into destructive vibrations at 26,000 RPM. In this case, it must be replaced
-          immediately.
 Gearing:
   meta:
     brand: Robinson Racing
@@ -490,37 +456,71 @@ Spur Gear:
         description: Due to previous damage to plastic gears, a more robust steel
           spur gear was chosen. This increases the rotating mass, but secures the
           mechanical integrity of the drivetrain at high torques.
-Tires:
+Driveshaft And Joints:
   meta:
-    brand: Team Corally
-    model: Attack Moosgummi Reifen (C-14705-35)
-    type: Foam rubber tire
-    tread: Slick
-    shore_hardness: 35°
-    wheel_hub: 12mm Hex - Suitable for kit hubs of the Carten T410R
-    assembly_status: Pre-glued (Industrially glued at the factory on spoke wheels)
-    shopping_item:
-      add_to_list: true
-      item_name: Team Corally C-14705-35 Attack Moosgummi Reifen - 1/10 GP Toerenwagen
-        - 35 shore
-      category: Wheels & Tires
-      reference_link: Search for Team Corally C-14705-35 at common RC shops
-      estimated_price_eur: 31.98
+    component: Central Drive Shaft (Center Shaft)
   properties:
-    dimensions:
-      width_front_mm: 26
-      width_rear_mm: 30
-    setup_instructions:
-      ballooning_protection: Foam rubber tires physically do not expand at approx.
-        8,800 RPM (axle speed at 100 km/h). The aerodynamics of the ZooRacing Hellcat
-        and the ride height remain constantly safe.
-      wheel_nut_securing: Mandatory to use locknuts with an intact nylon ring (M4)
-        and tighten firmly. The brutal acceleration of the 3660 motor can spin off
-        loose nuts immediately.
-      balancing: Despite industrial production, tires can have slight imbalances.
-        In case of strong vibrations on the jacked-up chassis, balance the wheels
-        (e.g. with putty lead in the rim) so as not to destroy the wheel bearings
-        of the Carten T410R at 100 km/h.
-      break_in_scrubbing: The smooth production layer must first be worn off. Use
-        the first test runs to calibrate the ESC to build up the grip for the final
-        topspeed run.
+    material_and_suitability:
+      driveshaft:
+        component: Driveshaft (Shaft)
+        material: Aluminum (anodized), hollow or solid (depending on batch)
+        suitability_100kmh_3s: YES. Aluminum is better here than steel, since the
+          lower rotating mass generates fewer vibrations at approx. 26,000 RPM.
+      joint_cups:
+        component: Connectors (Diff-Inputs)
+        material: Steel (Hardened)
+        suitability_100kmh_3s: YES. The mounts at the differential input are made
+          of steel and withstand the torque of the 3S drive.
+      rpm_load:
+        component: Speed load
+        specification: Shaft rotates at approx. 26,000 RPM
+        suitability_100kmh_3s: Critical, but doable for the kit part, as long as there
+          is no imbalance.
+    mandatory_durability_measures:
+      centering_floating_problem:
+        issue: Centering (The 'Floating' problem)
+        description: The shaft must not hit back and forth in the cups ('chatter').
+        action: Mandatory to place small O-rings or foam pads (often included in the
+          kit or cut from old shock rubbers) into the cups before the shaft is inserted.
+          The shaft must sit 'floating', but without play between the diffs.
+      joint_lubrication:
+        issue: Lubrication of the joints
+        description: The ends of the driveshaft (dogbones) that run in the steel cups
+          are metal on metal. With 3S power, massive wear occurs here ('hammering
+          in').
+        action: Lubricate these contact points with viscous molybdenum grease (black)
+          or special 'Joint Grease' to minimize friction.
+      runout_check:
+        issue: Check for concentricity
+        description: Roll the shaft over a glass plate (or a mirror) before installation.
+        action: If it 'wobbles' even minimally (is bent), it will set the entire chassis
+          into destructive vibrations at 26,000 RPM. In this case, it must be replaced
+          immediately.
+Differentials:
+  meta:
+    type: Oil-filled bevel differential (Metal Gear)
+    mechanical_load_capacity: '> 100 km/h (approx. 8,300 RPM axle speed)'
+  properties:
+    material_and_construction:
+      gears_ring_and_bevel: Sintered metal / Steel
+      diff_outdrives_cup_joints: Hardened steel
+      diff_case_cup: Fiber-reinforced composite plastic
+    mandatory_modifications:
+      perfect_shimming:
+        issue: Freedom from play
+        description: The inner metal gears must be adjusted absolutely free of play
+          during assembly with ultra-thin shims. Only this way is it prevented that
+          the teeth skip or tear off under the high torque of the 3S motor.
+      reinforced_sealing:
+        issue: O-ring sealing
+        description: At 8,300 RPM, the oil inside generates a massive centrifugal
+          pressure outwards. The rubber O-rings must be sealed with viscous special
+          grease (e.g. 'Green Slime') so that the differential does not run dry.
+      oil_viscosity:
+        issue: Locking effect & straight-line stability
+        description: The kit oil is too soft and leads to uncontrollable breakouts
+          during speedruns if one wheel loses minimal grip. Highly viscous silicone
+          oil must be used to force the car into a stubborn straight-line drive.
+        setup_recommendation:
+          front_axle: approx. 100,000 cSt (or a completely rigid spool/solid axle)
+          rear_axle: approx. 10,000 cSt
