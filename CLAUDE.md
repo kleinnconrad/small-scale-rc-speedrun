@@ -13,3 +13,6 @@ This project is a hardware project at a hobbyist level. The target audience cons
 * **Adjectives:** The unnecessary enumeration or redundant stringing together of adjectives (e.g., "the beautiful, exciting, great...") is to be strictly avoided.
 * **Word Choice:** Filler words and superlatives are to be omitted unless they are absolutely necessary for technical understanding.
 * **Phrases:** The use of phrases, idioms, or metaphorical paraphrases is prohibited.
+
+# Version Control & Committing
+* **Commits:** Never run `git commit` or `git push`, and never commit or push through GitHub tools or APIs, without the user's explicit approval of that specific commit. Prepare the changes locally, show the diff and the proposed commit message, and wait for approval. Approval of one commit does not extend to later commits.
