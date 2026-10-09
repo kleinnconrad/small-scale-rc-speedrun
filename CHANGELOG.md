@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.1](https://github.com/kleinnconrad/small-scale-rc-speedrun/compare/v1.2.0...v1.2.1) (2026-10-09)
+
+
+### Bug Fixes
+
+* resolve contradictions ([331f7a9](https://github.com/kleinnconrad/small-scale-rc-speedrun/commit/331f7a9cf65acb4983dcc34995bf99bb31dffec8))
+* resolve contradictions ([f4cb75d](https://github.com/kleinnconrad/small-scale-rc-speedrun/commit/f4cb75d0021629f3d7d0beec92dffe6aa02efdc7))
+
 ## [1.2.0](https://github.com/kleinnconrad/small-scale-rc-speedrun/compare/v1.1.1...v1.2.0) (2026-10-02)
 
 
