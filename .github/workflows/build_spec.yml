@@ -5,39 +5,42 @@ on:
     branches:
       - main
     paths:
-      - '**/spec_*.yaml' # Reagiert auf jede Änderung an einer Spezifikation
+      - '**/spec_*.yaml' # Reacts to every change of a specification
+      - 'scripts/merge_specs.py'
+  workflow_dispatch:
 
 jobs:
   build-all:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.12'
 
       - name: Install Dependencies
         run: pip install pyyaml
 
-      # Schritt 1: YAMLs zusammenführen
       - name: Run Merge Script
         run: python scripts/merge_specs.py
 
-
-
-
-      # Schritt 4: Alles zusammen committen
-      - name: Commit and Push all changes
+      # Only the generated file is committed, never other files of the workspace
+      - name: Commit and Push full_spec.yaml
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Das -A (All) zwingt Git, jede noch so kleine Änderung im Projekt aufzunehmen!
-          git add -A
-          
-          git commit -m "chore(docs): auto-update specs and docs [skip ci]" || echo "Keine Änderungen zu committen."
-          git pull --rebase
-          git push
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+
+          if [[ -n "$(git status --porcelain specs/full_spec.yaml)" ]]; then
+            git add specs/full_spec.yaml
+            git commit -m "chore(docs): auto-update specs and docs [skip ci]"
+            git pull --rebase
+            git push
+          else
+            echo "No changes to specs/full_spec.yaml detected."
+          fi

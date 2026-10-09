@@ -3,7 +3,7 @@ adr:
   title: Selection of active and passive motor cooling for 3S speedruns
   status: decided
   date: '2026-03-06'
-  context: "The targeted goal of 100 km/h requires the use of a 4000kV motor \non a \n3S LiPo (11.1V), which leads to high speeds of approx. 44,400 rpm \nand an enormous \ntall gear load (64T/38T). Under these conditions, \nmassive waste heat is generated in the motor \nwithin seconds. Without adequate \ncooling, there is a risk of \ndemagnetization of the rotor (heat death) or melting \nof the insulation. \nTherefore, a strict thermal management system \nis absolutely necessary.\n"
+  context: "The targeted goal of 100 km/h requires the use of a 3700kV motor (Hobbywing QuicRun 3660SL G2) \non a \n3S LiPo (11.1V), which leads to high speeds of approx. 41,000 rpm \nand an enormous \ntall gear load (43T pinion / 68T spur gear). Under these conditions, \nmassive waste heat is generated in the motor \nwithin seconds. Without adequate \ncooling, there is a risk of \ndemagnetization of the rotor (heat death) or melting \nof the insulation. \nTherefore, a strict thermal management system \nis absolutely necessary.\n"
   considered_alternatives:
   - option_id: 1
     name: No cooling (Stock Setup)
@@ -25,9 +25,9 @@ adr:
   decision: Passive 36mm Alu Heat Sink combined with active 40x40mm High-Speed
     Alu Fan
   cooling_motor:
-    component: Hobbywing QuicRun 3652SL (4000kV)
+    component: Hobbywing QuicRun 3660SL G2 (3700kV)
     heatsink:
-      size: 36mm (Suitable for 540 / 3650 / 3652 sizes)
+      size: 36mm (Suitable for 36 mm motors incl. 3660)
       material: Aluminum
       mounting: Clip-on heat sink
     fan_active:
@@ -38,10 +38,10 @@ adr:
       - Surpass Hobby (Rocket Series)
       - Yeah Racing (Tornado)
       - WTF (Wild Turbo Fan)
-  rationale: "The decision is made in favor of a dual cooling system (active and passive). \nThe 36mm \naluminum clip-on heat sink fits perfectly on the Hobbywing 3652SL motor. \nThe 40mm \nhigh-speed fan with aluminum frame offers the necessary hurricane \ndue to speeds of up to 20,000 rpm \nto blow the heat away. An aluminum frame \non the fan \nalso prevents it from deforming under heat buildup, and \nserves as an additional \nmini heat sink.\n"
+  rationale: "The decision is made in favor of a dual cooling system (active and passive). \nThe 36mm \naluminum clip-on heat sink fits perfectly on the Hobbywing 3660SL G2 motor. \nThe 40mm \nhigh-speed fan with aluminum frame offers the necessary hurricane \ndue to speeds of up to 20,000 rpm \nto blow the heat away. An aluminum frame \non the fan \nalso prevents it from deforming under heat buildup, and \nserves as an additional \nmini heat sink.\n"
   consequences:
-  - 'Power supply: The fan must be plugged into a free slot on the DumboRC receiver
-    (e.g. CH3 or CH4) to draw power from the ESC BEC.'
+  - 'Power supply: The fan must be plugged into a free slot on the Konect RG4CHWP receiver
+    (e.g. CH4; CH3 is used if the gyro gain is set remotely) to draw power from the ESC BEC.'
   - 'Cable management: Due to the high suction of the high-speed fan, all cables
     (especially antenna and servo cables) must absolutely be secured with cable ties
     so that they do not get caught in the rotor blades.'

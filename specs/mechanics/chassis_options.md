@@ -3,7 +3,7 @@
 | Property / specification | Carten T410R (base) | tamiya TT-02 SRX | xpress arrow AT1S | xpress execute XQ2S | SNRC R23 / R3G | rlaarlo AK917 | xray X4 '24 (benchmark) |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **Drive concept** | shaft | shaft | shaft | 2-belt | 2-belt | shaft | 2-belt |
-| **Chassis bottom plate** | 3mm **carbon** | plastic tub | FRP (fiberglass) | FRP (fiberglass) | **carbon** | **carbon** or aluminum | premium **carbon** |
+| **Chassis bottom plate** | 2.25mm **carbon** | plastic tub | FRP (fiberglass) | FRP (fiberglass) | **carbon** | **carbon** or aluminum | premium **carbon** |
 | **Differential gears** | **metal** (sintered metal) | front spool / rear bevel diff | plastic / composite | plastic / composite | plastic / composite | **metal** (1:8 components) | plastic (competition grade) |
 | **Suspension system** | C-hubs | C-hubs (TRF) | C-hubs | C-hubs | C-hubs | C-hubs | pivot-ball / active-toe |
 | **Motor position** | rear right | rear right | rear right | mid-motor | mid-motor | mid | mid (ultra-low) |

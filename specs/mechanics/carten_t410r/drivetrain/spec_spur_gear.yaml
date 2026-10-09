@@ -15,7 +15,7 @@ spec:
           must absolutely be secured with medium-strength threadlocker (e.g. Loctite 243 / blue)
           on the flat spot of the motor shaft.
       gear_mesh_calibration:
-        issue: Gear backlash at > 11,000 RPM
+        issue: Gear backlash at approx. 26,000 RPM (spur gear) and 41,000 RPM (pinion)
         description: The play between the steel pinion and the steel spur gear must be
           calibrated exactly with the proven paper method. Too tight play
           leads to extreme friction heat, power loss and high wear.

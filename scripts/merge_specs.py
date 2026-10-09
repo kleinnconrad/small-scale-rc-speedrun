@@ -5,7 +5,8 @@ import os
 def merge_specs():
     # The magic word is "recursive=True" and "**/"
     # This way the script searches in the main directory AND in all subfolders!
-    files = glob.glob('**/spec_*.yaml', recursive=True)
+    # Sorted with '/' as separator so that Windows and Linux (CI) produce the same order
+    files = sorted(glob.glob('**/spec_*.yaml', recursive=True), key=lambda p: p.replace(os.sep, '/'))
     merged_data = {}
     
     if not files:

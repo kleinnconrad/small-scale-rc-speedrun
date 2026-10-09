@@ -1,7 +1,7 @@
 adr:
   id: ADR-011
   title: Selection of Gyro for vehicle stabilization
-  status: Decided
+  status: decided
   date: '2026-08-30'
   context: "At high speeds of up to 100 km/h, the RC vehicle requires electronic stabilization to maintain a straight trajectory and prevent spin-outs. A gyro sensor detects unwanted rotational movements and automatically applies counter-steering via the steering servo. The selection of a gyro must balance reliability and cost. High-end gyros offer advanced features but exceed the current project budget."
   considered_alternatives:

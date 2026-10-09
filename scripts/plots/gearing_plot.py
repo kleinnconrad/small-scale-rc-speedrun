@@ -6,9 +6,9 @@ def plot_dashboard():
     # 1. Constants & Input data for 3660 Motor (3700KV on 3S)
     motor_kv = 3700
     akku_v = 11.1
-    spur_gear = 72
+    spur_gear = 68
     internal_ratio = 2.47
-    tire_diameter_mm = 65.0
+    tire_diameter_mm = 64.0
 
     # 2. Calculations
     pinions = np.arange(21, 45)
@@ -66,7 +66,7 @@ def plot_dashboard():
     # Merge all legends
     lines = [line1, line2] + target_lines
     labels = [l.get_label() for l in lines]
-    ax1.legend(lines, labels, loc='upper left', fontsize=9)
+    ax1.legend(lines, labels, loc='lower right', fontsize=9)
 
     plt.title('Drivetrain Dashboard: Carten T410R (Extended Speed Targets)', fontsize=14, fontweight='bold')
     fig.tight_layout()

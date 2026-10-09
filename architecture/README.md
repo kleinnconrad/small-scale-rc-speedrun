@@ -10,13 +10,13 @@ This directory contains all fundamental architecture and hardware decisions for 
 | **ADR-002** | 2026-03-06 | Selection of the brushless motor combo for 100 km/h speedruns | 🟢 decided | Hobbywing QuicRun WP10BL120 G2 Combo (3660SL 3700KV) |
 | **ADR-003** | 2026-03-06 | Selection of the LiPo Battery for the 100 km/h Goal. | 🟢 decided | Absima GreenHorn Line V2 (3S / 5000mAh / 50C / Hardcase) |
 | **ADR-004** | 2026-03-06 | Selection of the charger for 3S LiPo batteries | 🟢 decided | SkyRC S100neo |
-| **ADR-005** | 2026-08-20 | Selection of the remote control system for 100 km/h speedruns | 🟢 decided | X9S Radio + Mini Waterproof 4-Channel Receiver RG4CHWP |
+| **ADR-005** | 2026-08-20 | Selection of the remote control system for 100 km/h speedruns | 🟢 decided | Konect X9S Radio + Mini Waterproof 4-Channel Receiver RG4CHWP |
 | **ADR-006** | 2026-08-21 | Selection of the steering servo for precise high-speed control | 🟢 decided | Savöx SC-1252MG+ |
 | **ADR-007** | 2026-03-06 | Selection of active and passive motor cooling for 3S speedruns | 🟢 decided | Passive 36mm Alu Heat Sink combined with active 40x40mm High-Speed Alu Fan |
-| **ADR-008** | 2026-10-05 | Selection of tires for 100 km/h speedruns | 🟢 Decided | Team Corally C-14705-35 Attack Moosgummi Reifen - 1/10 GP Toerenwagen - 35 shore |
+| **ADR-008** | 2026-10-05 | Selection of tires for 100 km/h speedruns | 🟢 decided | Team Corally C-14705-35 Attack Moosgummi Reifen - 1/10 GP Toerenwagen - 35 shore |
 | **ADR-009** | 2026-03-12 | Selection of the aerodynamic body for 100 km/h speedruns | 🟢 decided | ZooRacing Hellcat (190 mm, 0.7mm thickness) |
 | **ADR-010** | 2026-03-10 | Selection of the GPS measuring system to validate the 100 km/h mark | 🟢 decided | Ruddog GPS Performance Analyzer |
-| **ADR-011** | 2026-08-30 | Selection of Gyro for vehicle stabilization | 🟢 Decided | SkyRC GC301 Gyro |
+| **ADR-011** | 2026-08-30 | Selection of Gyro for vehicle stabilization | 🟢 decided | SkyRC GC301 Gyro |
 
 ---
 
@@ -28,7 +28,7 @@ This directory contains all fundamental architecture and hardware decisions for 
 #### Context
 For the 100 km/h speedrun project, a mechanically stable basis is required. 
 The platform must withstand 
-extreme loads (approx. 44,000 rpm at the motor, massive 
+extreme loads (approx. 41,000 rpm at the motor, massive 
 centrifugal forces on the axles). 
 The fundamental architecture question (Make or Buy) compares the construction of an own budget kit ("Make") 
 
@@ -47,7 +47,7 @@ The decision is made in favor of the "Make" option with the Carten T410R
 It is the only kit in the benchmark field of this price class that 
 combines the essential requirements 
 for a 3S/100 km/h run out of the box: 
-1. A stiff 3mm carbon bottom plate (prevents dangerous fluttering). 
+1. A stiff 2.25mm carbon bottom plate (prevents dangerous fluttering). 
 2. A robust shaft drive (eliminates the risk of skipping belts). 
 3. Differential gears made of sintered metal (solves the knockout criterion of shearing 
 plastic diffs). 
@@ -89,8 +89,10 @@ The 3660 motor delivers the perfect
 rpm with its 3700KV on 3S 
 (approx. 41,000 rpm) and has enough torque due to the longer rotor 
 to confidently handle 
-the calculated wheel load of approx. 24 %. This is the safest and 
-most efficient solution on a budget under 100 €.
+the calculated wheel load of approx. 25.6 % (43T pinion / 68T spur gear). 
+The combo is the safest and most efficient solution on a budget under 100 €. 
+Note: 25.6 % is slightly above the 25 % guide value of the load model; 
+thermal problems have not occurred in the tests so far.
 
 
 #### Consequences
@@ -106,10 +108,10 @@ most efficient solution on a budget under 100 €.
 
 #### Context
 In order to accelerate the RC100 project to over 100 km/h, the power source must be optimally 
-matched to the 4000kV motor and the 120A ESC (Hobbywing QuicRun). 
-A 2S LiPo (7.4V) would only deliver approx. 29,600 rpm, which is not sufficient for 100 km/h 
+matched to the 3700kV motor and the 120A ESC (Hobbywing QuicRun). 
+A 2S LiPo (7.4V) would only deliver approx. 27,400 rpm, which is not sufficient for 100 km/h 
 with a normal gear ratio. Therefore, a 3S LiPo (11.1V) is absolutely necessary to 
-reach the calculated ~44,400 rpm. In addition, the battery must be able to briefly 
+reach the calculated ~41,000 rpm. In addition, the battery must be able to briefly 
 deliver extreme currents without dropping in voltage (voltage sag), and must be physically 
 protected in the event of a crash at high speed.
 
@@ -121,7 +123,7 @@ protected in the event of a crash at high speed.
 The decision is made in favor of the Absima GreenHorn V2 3S LiPo. With a 50C 
 discharge rate, it offers 
 enough buffer for the massive current peaks when accelerating 
-the 64T/38T gearing. 
+the 43T/68T gearing (pinion/spur gear). 
 The hardcase is a safety requirement for speedruns, as an impact at 100 km/h 
 would immediately destroy and ignite a softcase LiPo. The pre-assembled XT60 connector 
 guarantees a 
@@ -195,10 +197,10 @@ the setup.
 
 
 #### Decision
-> **X9S Radio + Mini Waterproof 4-Channel Receiver RG4CHWP**
+> **Konect X9S Radio + Mini Waterproof 4-Channel Receiver RG4CHWP**
 
 #### Rationale
-The tests with the Carson Reflex Wheel X1 showed insufficient steering precision, as the servo did not reproducibly return to the neutral position depending on the steering angle. To increase steering precision, the X9S Radio remote control was purchased in combination with the RG4CHWP receiver for 152 €.
+The tests with the Carson Reflex Wheel X1 showed insufficient steering precision, as the servo did not reproducibly return to the neutral position depending on the steering angle. To increase steering precision, the Konect X9S remote control was purchased in combination with the RG4CHWP receiver for 152 €.
 
 
 #### Consequences
@@ -213,27 +215,14 @@ The tests with the Carson Reflex Wheel X1 showed insufficient steering precision
 **Status:** decided | **Date:** 2026-08-21
 
 #### Context
-At speeds of 100 km/h, enormous aerodynamic and mechanical 
-forces act 
-on the front wheels of the Carten T410R. A minimal jitter, play 
-or a too slow 
-reaction time of the steering servo can immediately lead to loss of control 
-and total failure. 
-In addition, space in a 1:10 touring car chassis 
-is limited. Since our MVP remote control 
-(Carson Reflex Wheel X1) does not have an electronic gyro, the servo must 
-hold the 
-straight line mechanically very precisely and powerfully. A servo 
-with metal gears (robustness), 
-high speed (~0.11s) and sufficient 
-torque (approx. 9 kg) is required.
+At speeds of 100 km/h, enormous aerodynamic and mechanical forces act on the front wheels of the Carten T410R. A minimal jitter, play or a too slow reaction time of the steering servo can immediately lead to loss of control and total failure. In addition, space in a 1:10 touring car chassis is limited. The servo must hold the straight line precisely, return reproducibly to the neutral position and execute the counter-steering commands of the steering gyro (ADR-011) without delay. A low-profile servo with metal gears (robustness), high speed and a precise neutral return is required.
 
 
 #### Decision
 > **Savöx SC-1252MG+**
 
 #### Rationale
-Test drives showed that the previous setup did not provide the required steering precision. The servo did not reproducibly return to the neutral position. Therefore, a change was made to the Savöx SC-1252MG+ (52.72 €). It offers a speed of 0.07s and a torque of 7 kg. This ensures a precise return to the neutral position.
+Test drives with the MVP servo (JX PDI-4409MG) showed that the required steering precision was not reached, as the servo did not reproducibly return to the neutral position. The change to the Savöx SC-1252MG+ (52.72 €) was necessary to reach an appropriate steering precision. It offers a speed of 0.07s, a torque of 7 kg and a precise return to the neutral position. In addition, the mechanical resistance in the steering caused by overtightened C-hub mounting screws was eliminated (error log no. 14). Since test drive 13, corrective steering maneuvers can be executed effectively.
 
 
 #### Consequences
@@ -248,11 +237,11 @@ Test drives showed that the previous setup did not provide the required steering
 **Status:** decided | **Date:** 2026-03-06
 
 #### Context
-The targeted goal of 100 km/h requires the use of a 4000kV motor 
+The targeted goal of 100 km/h requires the use of a 3700kV motor (Hobbywing QuicRun 3660SL G2) 
 on a 
-3S LiPo (11.1V), which leads to high speeds of approx. 44,400 rpm 
+3S LiPo (11.1V), which leads to high speeds of approx. 41,000 rpm 
 and an enormous 
-tall gear load (64T/38T). Under these conditions, 
+tall gear load (43T pinion / 68T spur gear). Under these conditions, 
 massive waste heat is generated in the motor 
 within seconds. Without adequate 
 cooling, there is a risk of 
@@ -268,7 +257,7 @@ is absolutely necessary.
 #### Rationale
 The decision is made in favor of a dual cooling system (active and passive). 
 The 36mm 
-aluminum clip-on heat sink fits perfectly on the Hobbywing 3652SL motor. 
+aluminum clip-on heat sink fits perfectly on the Hobbywing 3660SL G2 motor. 
 The 40mm 
 high-speed fan with aluminum frame offers the necessary hurricane 
 due to speeds of up to 20,000 rpm 
@@ -280,7 +269,7 @@ mini heat sink.
 
 
 #### Consequences
-- Power supply: The fan must be plugged into a free slot on the DumboRC receiver (e.g. CH3 or CH4) to draw power from the ESC BEC.
+- Power supply: The fan must be plugged into a free slot on the Konect RG4CHWP receiver (e.g. CH4; CH3 is used if the gyro gain is set remotely) to draw power from the ESC BEC.
 - Cable management: Due to the high suction of the high-speed fan, all cables (especially antenna and servo cables) must absolutely be secured with cable ties so that they do not get caught in the rotor blades.
 - Thermal paste: It is strongly recommended to apply a drop of PC thermal paste between the motor and the aluminum heat sink in order to minimize the thermal contact resistance.
 
@@ -288,7 +277,7 @@ mini heat sink.
 ---
 
 ### ADR-008: Selection of tires for 100 km/h speedruns
-**Status:** Decided | **Date:** 2026-10-05
+**Status:** decided | **Date:** 2026-10-05
 
 #### Context
 At a target speed of 100 km/h and the associated high 
@@ -320,7 +309,7 @@ While belted tires avoid ballooning, they do not provide sufficient stability an
 #### Consequences
 - Pre-check: Even factory pre-glued tires must absolutely be checked for manufacturing defects on the glue seam before the first run (pull briefly on the tire sidewall).
 - Balancing: Since the smallest imbalances destabilize the chassis at 100 km/h, the wheels should ideally be balanced with an RC tire balancer and putty lead.
-- Temperature window: The 36-shore compound is relatively hard. In order to build up maximum mechanical grip, the tires must be warmed up by 1-2 slow laps before the actual speedrun.
+- Temperature window: In order to build up maximum mechanical grip, the 35 shore foam tires must be warmed up by 1-2 slow laps before the actual speedrun.
 
 
 ---
@@ -358,7 +347,6 @@ start to vibrate or rub against the tires.
 
 
 #### Consequences
-- Painting: The body is supplied unpainted. Special lexan paint (polycarbonate paint, e.g. Tamiya PS series) must be used, as normal paint would flake off.
 - Assembly: The included rear wing must be screwed on very rigidly. The body holes must be precisely machined with lexan scissors and a body reamer.
 - Chassis preparation: The foam bumper on the front of the Carten T410R must sit exactly flush with the inside of the front apron to prevent it from being pushed in at high speed.
 
@@ -403,7 +391,7 @@ saves a heavy, readable display directly on the vehicle.
 ---
 
 ### ADR-011: Selection of Gyro for vehicle stabilization
-**Status:** Decided | **Date:** 2026-08-30
+**Status:** decided | **Date:** 2026-08-30
 
 #### Context
 At high speeds of up to 100 km/h, the RC vehicle requires electronic stabilization to maintain a straight trajectory and prevent spin-outs. A gyro sensor detects unwanted rotational movements and automatically applies counter-steering via the steering servo. The selection of a gyro must balance reliability and cost. High-end gyros offer advanced features but exceed the current project budget.

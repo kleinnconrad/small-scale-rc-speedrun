@@ -5,10 +5,9 @@ on:
     branches:
       - main
     paths:
-      # Pfade auf kleingeschriebenes 'architecture' angepasst
       - 'architecture/adr_*.yaml'
       - 'architecture/adr_*.yml'
-      - 'generate_adr_readme.py'
+      - 'scripts/generate_adr_readme.py'
   workflow_dispatch:
 
 jobs:
@@ -38,13 +37,12 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          
-          # Pfade beim Check und Commit auf 'architecture' angepasst
+
           if [[ -f "architecture/README.md" ]] && [[ -n "$(git status --porcelain architecture/README.md)" ]]; then
             git add architecture/README.md
             git commit -m "docs(adr): auto-update architecture/README.md [skip ci]"
             git pull --rebase
             git push
           else
-            echo "Keine Änderungen an der architecture/README.md erkannt."
+            echo "No changes to architecture/README.md detected."
           fi

@@ -4,7 +4,7 @@ spec:
     model: Hellcat
     vehicle_class: 1:10 On-Road Touring Car
     width_mm: 190
-    wheelbase_mm: 257
+    wheelbase_mm: 258
     material: Polycarbonate (Lexan)
     material_thickness_mm: 0.7
     shopping_item:

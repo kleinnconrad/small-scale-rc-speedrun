@@ -15,7 +15,7 @@ def calculate_rc_requirements():
             limit_green, limit_yellow, limit_red = 19.0, 22.0, 25.0
             motor_size = "3650 (Standard)"
 
-        diameter_input = input("Please enter tire diameter in mm (e.g. 65): ")
+        diameter_input = input("Please enter tire diameter in mm (e.g. 64): ")
         diameter_mm = float(eval(diameter_input))
         
         target_speed_kmh = float(input("Please enter desired target speed in km/h (e.g. 100): "))
@@ -23,7 +23,7 @@ def calculate_rc_requirements():
         print(f"Invalid input or formula error: {e}")
         return
 
-    spur_gear = 72
+    spur_gear = 68
     internal_ratio = 2.47
     pinions = range(21, 45)
 
@@ -39,7 +39,7 @@ def calculate_rc_requirements():
     print(f"Required Axle RPM:     {axle_rpm:,.0f} RPM".replace(',', '.'))
     
     print("\n" + "="*75)
-    print(" MOTOR REQUIREMENTS PER PINION (Spur: 72T) ")
+    print(f" MOTOR REQUIREMENTS PER PINION (Spur: {spur_gear}T) ")
     print("="*75)
     print(f"{'Pinion':<8} | {'Ratio':<6} | {'Motor RPM':<14} | {'Wheel Load':<10} | {'Load Zone'}")
     print("-" * 75)

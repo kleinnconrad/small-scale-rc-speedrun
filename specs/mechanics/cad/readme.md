@@ -15,7 +15,7 @@ This folder contains 3D printed parts (STL files) for the RC car **Carten T410R*
 
 ### 1. Motor fan mount (`fan_mount.stl`)
 * **Author:** [@kleinnconrad](https://github.com/kleinnconrad) (own design)
-* **Description:** A fan mount for a **50x50 mm motor fan from hobbywing**. Designed for mounting in the Carten T410R for installation and cooling of the motor.
+* **Description:** A 50 mm fan mount (60 x 50 x 18 mm, 40 mm air opening) for the **40 mm motor fan from hobbywing**. Designed for mounting in the Carten T410R for installation and cooling of the motor.
 
 ### 2. LiPo battery dummy (`lipo_mock.stl`)
 * **Author:** [@kleinnconrad](https://github.com/kleinnconrad) (own design)
