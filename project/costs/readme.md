@@ -22,20 +22,17 @@
 | 8 | **steering** | amewi 4409MG AMX digital servo low-profile (old) | AW-28995 | tamico shop | 1 | 23,99 € |
 | 9 | **testing** | QWORK digital tachometer | - | amazon | 1 | 13,88 € |
 | 10 | **body** | ZooRacing ZR-0006-07 - HellCat - 1:10 touring car | 10-ZR-0006-07 | RC-KleinKram | 1 | 30,99 € |
-| 11 | **tool** | tamiya 86015 - PS-15 metallic red (100ml) | 17-86015 | RC-KleinKram | 1 | 8,99 € |
-| 12 | **tool** | tamiya 86012 - PS-12 silver (100ml) | 17-86012 | RC-KleinKram | 1 | 8,99 € |
-| 13 | **tool** | tamiya 86005 - PS-5 black (100ml) | 17-86005 | RC-KleinKram | 1 | 8,99 € |
-| 14 | **tool** | bittydesign BDSS-37855-C curved scissors | 18-BDSS-37855-C | RC-KleinKram | 1 | 10,99 € |
-| 15 | **wheels & tires** | Team Corally Attack Moosgummi Reifen 35 shore front & rear | C-14705-35 | - | 2 | 31,98 € |
-| 16 | **telemetry** | ruddog GPS/GNSS speed & performance analyzer | RP-0525 | RCFOX | 1 | 54,85 € |
-| 17 | **ESC programming** | hobbywing programming box LED universal | HW30501003 | modellbau metz | 1 | 11,49 € |
-| 18 | **control** | X9S radio + RG4CHWP receiver | KN-X9S-4CH | RCFOX | 1 | 152,00 € |
-| 19 | **steering** | Savöx SC-1252MG+ low-profile servo | SA_SC-1252MG+ | RCFOX | 1 | 52,72 € |
-| 20 | **steering** | ALU CLAMP SERVO HORN 25T (HUD293409) | HUD293409 | RCFOX | 1 | 21,50 € |
-| 21 | **spare parts** | CARTEN T410R - 1:10 4WD touring car kit | 75-NHA102 | RC-KleinKram | 1 | 179,99 € |
-| 22 | **mechanics** | CARTEN NBA360 steel spur gear 48DP 68 teeth | 75-NBA360 | - | 1 | 15,99 € |
-| 23 | **telemetry** | WFLY S01G GPS-modul | - | - | 1 | 18,00 € |
-| 24 | **steering** | SkyRC GC301 Gyro | - | - | 1 | 25,00 € |
+| 11 | **tool** | bittydesign BDSS-37855-C curved scissors | 18-BDSS-37855-C | RC-KleinKram | 1 | 10,99 € |
+| 12 | **wheels & tires** | Team Corally Attack Moosgummi Reifen 35 shore front & rear | C-14705-35 | - | 2 | 31,98 € |
+| 13 | **telemetry** | ruddog GPS/GNSS speed & performance analyzer | RP-0525 | RCFOX | 1 | 54,85 € |
+| 14 | **ESC programming** | hobbywing programming box LED universal | HW30501003 | modellbau metz | 1 | 11,49 € |
+| 15 | **control** | Konect X9S radio + RG4CHWP receiver | KN-X9S-4CH | RCFOX | 1 | 152,00 € |
+| 16 | **steering** | Savöx SC-1252MG+ low-profile servo | SA_SC-1252MG+ | RCFOX | 1 | 52,72 € |
+| 17 | **steering** | ALU CLAMP SERVO HORN 25T (HUD293409) | HUD293409 | RCFOX | 1 | 21,50 € |
+| 18 | **spare parts** | CARTEN T410R - 1:10 4WD touring car kit | 75-NHA102 | RC-KleinKram | 1 | 179,99 € |
+| 19 | **mechanics** | CARTEN NBA360 steel spur gear 48DP 68 teeth | 75-NBA360 | - | 1 | 15,99 € |
+| 20 | **telemetry** | WFLY S01G GPS-modul | - | - | 1 | 18,00 € |
+| 21 | **steering** | SkyRC GC301 Gyro | - | - | 1 | 25,00 € |
 
 ---
 
@@ -44,5 +41,5 @@
 | Description | amount |
 |:---|---:|
 | **Pure vehicle costs:** | **662,48 €** |
-| Costs for tools, infrastructure & spare parts (pos. 2, 7, 8, 9, 11-14, 16, 17, 21): | 402,10 € |
-| **Total costs:** | **1064,58 €** |
+| Costs for tools, infrastructure & spare parts (pos. 2, 7, 8, 9, 11, 13, 14, 18): | 375,13 € |
+| **Total costs:** | **1037,61 €** |

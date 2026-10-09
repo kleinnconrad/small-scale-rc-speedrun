@@ -1,7 +1,7 @@
 adr:
   id: ADR-008
   title: Selection of tires for 100 km/h speedruns
-  status: Decided
+  status: decided
   date: '2026-10-05'
   context: "At a target speed of 100 km/h and the associated high \nspeeds \nof the wheels, standard rubber tires expand massively in the middle due to centrifugal force \n(the so-called \"pizza cutter effect\" or \"ballooning\"\n). This leads to an immediate \nloss of control and often to the tire bursting. \nPre-glued tires \non rims with a 12mm hex hub \n(suitable for the Carten T410R chassis) are required, \nwhich retain their shape 100% under high centrifugal forces \nand whose rubber compound \nwithstands the high friction heat on rough \nasphalt. \nIn addition, the real track conditions (not \ndust-free normal asphalt vs. \ncleanly prepared race track) must be considered when choosing \nthe tire tread (slick vs. grooved). \n\n"
   considered_alternatives:
@@ -9,7 +9,7 @@ adr:
     name: Standard Touring Car Rubber Tires (Non-Belted)
     type: Low-Budget / RTR Standard
     evaluation: Life-threatening for this project. The lack of fabric inside
-      leads to immediate ballooning at the targeted 44,000 rpm of the motor,
+      leads to immediate ballooning at the targeted 41,000 rpm of the motor,
       loss of traction and, in the worst case, tire blowouts.
   - option_id: 2
     name: Contact RC 1/10 Foam Tires
@@ -46,7 +46,9 @@ adr:
     brand: Team Corally
     model: Attack Moosgummi Reifen (C-14705-35)
     type: Foam rubber tires
+    shore_hardness: 35 shore
     hex_size: 12mm
+    diameter: 64mm
     width: "30mm (rear), 26mm (front)"
     surface: Asphalt
   rationale: "While belted tires avoid ballooning, they do not provide sufficient stability and grip for speedruns. Changing to foam rubber tires significantly improves both stability and grip at high speeds. Thus, the decision was revised to use the Team Corally 35 shore foam tires."
@@ -55,5 +57,5 @@ adr:
     for manufacturing defects on the glue seam before the first run (pull briefly on the tire sidewall).'
   - 'Balancing: Since the smallest imbalances destabilize the chassis at 100 km/h,
     the wheels should ideally be balanced with an RC tire balancer and putty lead.'
-  - 'Temperature window: The 36-shore compound is relatively hard. In order to build up maximum mechanical
-    grip, the tires must be warmed up by 1-2 slow laps before the actual speedrun.'
+  - 'Temperature window: In order to build up maximum mechanical
+    grip, the 35 shore foam tires must be warmed up by 1-2 slow laps before the actual speedrun.'

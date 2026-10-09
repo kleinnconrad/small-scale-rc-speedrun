@@ -6,7 +6,7 @@ The technical challenge primarily results from the chosen scale and the limited 
 
 The artefacts of this repository are:
 * Architecture decision records (ADRs) in the `/architecture` directory
-* System specification in the `specs/full_spec.yml` file
+* System specification in the `specs/full_spec.yaml` file
 * Vehicle setup configurations in the `/setup_sheets` directory
 
 <img src="photos/PXL_20261005_112700039.jpg" alt="RC Car Photo 1" width="49%"> <img src="photos/PXL_20261005_112749664.jpg" alt="RC Car Photo 2" width="49%">
@@ -29,7 +29,7 @@ The artefacts of this repository are:
   * **`/follow_up_projects`**: Documentation of related follow-up projects
 * **`/scripts`**: Automation scripts
   * **`/calc`**: Calculation scripts
-  * **`/plots`**: Generated plots
+  * **`/plots`**: Plot scripts
 * **`/setup_sheets`**: Vehicle setup configurations
 * **`/specs`**: Specifications of the vehicle components
   * **`/electronics`**: Selection and specification of electronic components such as motors, electronic speed controllers, and batteries
@@ -91,7 +91,7 @@ classDiagram
 
 ## Calculation models for drivetrain design
 To avoid thermal or mechanical overload of the electronic components, custom-developed calculation models are used:
-* **Gearing calculator (`scripts/calc/getriebe_calc.py`)**: Simulates the mechanical wheel load for the motor based on tire diameter and target speed, depending on available motor pinions. Setups are categorized into load zones for the defined drive system.
+* **Gearing calculator (`scripts/calc/gearing_calc.py`)**: Simulates the mechanical wheel load for the motor based on tire diameter and target speed, depending on available motor pinions. Setups are categorized into load zones for the defined drive system.
 * **Limit calculator (`scripts/calc/max_speed.py`)**: Calculates the achievable top speed considering specific motor data, battery voltage, and defined thermal tolerance limits based on physical hardware specifications.
 
 ## Learnings & modifications (so far...)
@@ -141,10 +141,12 @@ This section documents the findings from previous tests & speedruns in 1:10 scal
 *(Legend: **[L]** = learning, **[M]** = modification)*
 
 ## Repository automation
-Maintaining the specifications and architecture decisions formatted as YAML files triggers automated processes:
-* **Aggregation of specifications**: Individual hardware specifications are merged into a central specification file in the root directory.
-* **Cost overview**: Bill of materials and shopping lists are automatically derived from the specifications and updated.
-* **Decision log**: Architecture decisions are automatically compiled into a chronological log.
+Maintaining the specifications, architecture decisions and setup sheets formatted as YAML files triggers automated processes:
+* **Aggregation of specifications**: Individual hardware specifications are merged into the central specification file `specs/full_spec.yaml`.
+* **Decision log**: Architecture decisions are automatically compiled into an overview sorted by ID (`architecture/README.md`).
+* **Setup dashboard**: The latest setup sheet is converted to `docs/latest_setup.json` and deployed to GitHub Pages.
+
+The bill of materials (`project/costs`) is maintained manually.
 
 ## Follow-up project: Telemetry system
 This project is followed by an independent project concerned with the development of a telemetry data system based on an ESP32 microcontroller. The goal is the sensory recording and transmission of driving dynamics parameters of the RC vehicle.

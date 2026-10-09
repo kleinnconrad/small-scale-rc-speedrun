@@ -8,7 +8,7 @@ def calculate_max_speed():
     try:
         kv = float(input("Motor kV (e.g. 4000 or 3700): "))
         cells = int(input("LiPo Cells (e.g. 3 for 3S): "))
-        diameter_mm = float(eval(input("Tire diameter in mm (e.g. 65): ")))
+        diameter_mm = float(eval(input("Tire diameter in mm (e.g. 64): ")))
         
         motor_size = input("Motor Size (3650 or 3660): ").strip()
         if motor_size == "3660":
@@ -26,7 +26,7 @@ def calculate_max_speed():
     v_max = cells * 4.2  
     v_nom = cells * 3.7  
 
-    spur_gear = 72
+    spur_gear = 68
     internal_ratio = 2.47
     
     rpm_max = kv * v_max

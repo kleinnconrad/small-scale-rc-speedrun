@@ -32,12 +32,18 @@ adr:
       gyro and slightly less maximum range than the DumboRC, it scores with
       absolute simplicity, a highly robust fail-safe and absolutely necessary
       setting options (Dual Rate) for initial 100 km/h tests.
-  decision: X9S Radio + Mini Waterproof 4-Channel Receiver RG4CHWP
+  - option_id: 5
+    name: Konect X9S Radio + RG4CHWP Receiver
+    type: Mid-Range / 4-Channel 2.4 GHz Pistol Grip Transmitter
+    evaluation: Hall sensor transmitter and a waterproof 4-channel receiver with fail-safe.
+      The additional channels allow a remote gyro gain adjustment (ADR-011). Higher price
+      (~152 €) than the MVP options.
+  decision: Konect X9S Radio + Mini Waterproof 4-Channel Receiver RG4CHWP
   tx_meta_transmitter:
     brand: Konect
     model: X9S Radio
     type: 4-Channel 2.4 GHz Pistol Grip Transmitter
-  rationale: "The tests with the Carson Reflex Wheel X1 showed insufficient steering precision, as the servo did not reproducibly return to the neutral position depending on the steering angle. To increase steering precision, the X9S Radio remote control was purchased in combination with the RG4CHWP receiver for 152 €.\n"
+  rationale: "The tests with the Carson Reflex Wheel X1 showed insufficient steering precision, as the servo did not reproducibly return to the neutral position depending on the steering angle. To increase steering precision, the Konect X9S remote control was purchased in combination with the RG4CHWP receiver for 152 €.\n"
   consequences:
   - 'Receiver installation: The RG4CHWP receiver is installed and the fail-safe must absolutely be programmed to brake/neutral.'
   - 'Interface compatibility: The operating voltage of the receiver must be matched with the BEC output voltage of the motor controller.'

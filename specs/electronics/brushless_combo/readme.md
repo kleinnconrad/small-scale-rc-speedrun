@@ -43,9 +43,9 @@
 
 ### 2.2 setting the parameter
 1. Connect the drive battery and turn on the ESC. The numeric segment display of the program card is activated.
-2. Iteratively press the **ITEM** button until the parameter for "start mode / punch" (usually menu item 4) is displayed on the left display field.
+2. Iteratively press the **ITEM** button until the parameter for "start mode / punch" (menu item 3) is displayed on the left display field.
 3. Press the **VALUE** button to specify the numeric value.
-   * *Note for the present high-load gear ratio (43/72):* Value must absolutely be set to **1 (soft)** to minimize critical inrush currents (stall currents) and prevent triggering of the overcurrent protection circuit.
+   * *Note for the present high-load gear ratio (43/68):* Value must absolutely be set to **1 (soft)** to minimize critical inrush currents (stall currents) and prevent triggering of the overcurrent protection circuit.
 4. Press the **OK** button to write the changed value into the non-volatile memory of the ESC. (Motor usually gives an acoustic confirmation signal).
 5. Turn off the ESC and disconnect the physical connection to the program card.
 

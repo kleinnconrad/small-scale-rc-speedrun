@@ -8,8 +8,8 @@ spec:
       type: Brushless ESC (Sensorless)
       ampere_continuous: Min. 120A
       lipo_support: 2S - 3S (optional up to 4S)
-      bec_voltage: '6.0V or 7.4V (adjustable for servo - CAUTION: Leave at 6.0V for
-        Carson receiver!)'
+      bec_voltage: '6.0V or 7.4V (adjustable for servo - CAUTION: Leave at 6.0V, the
+        Savöx SC-1252MG+ servo is rated for 4.8V - 6.0V!)'
       connector_system_battery: XT60 (Soldered from the factory for the G2 Combo)
       connector_system_motor: 4.0mm gold contact
       reference_model: Hobbywing QuicRun WP10BL120 G2
@@ -45,7 +45,7 @@ spec:
         estimated_price_eur: 15.0
     cooling:
       motor_heatsink: Passive aluminum heat sink for 36mm motors
-      motor_fan: 'Optional: 30mm or 40mm High-Speed Fan (Operation via free
+      motor_fan: '40mm High-Speed Fan (Operation via free
         slot on the receiver)'
       shopping_item:
         add_to_list: false

@@ -16,7 +16,7 @@ It shows the direct correlation between the chosen pinion size, the resulting me
 ![Drivetrain dashboard with speed targets](https://github.com/kleinnconrad/RC100/blob/main/photos/1772373437236.png)
 
 ### Reading guide for the dashboard:
-* **The dashed lines (grayscale):** Mark the required axle speed for our milestones (100, 110, 120 and 130 km/h) with a tire diameter of 65 mm.
+* **The dashed lines (grayscale):** Mark the required axle speed for our milestones (100, 110, 120 and 130 km/h) with a tire diameter of 64 mm.
 * **The red curve (axle speed):** Shows the theoretically applied speed of the wheels at full throttle per pinion. Where this curve intersects one of the dashed lines, the respective speed target is reached.
 * **The blue curve (wheel load):** Shows the mechanical load of the motor. 
 * **The colored zones (background):** Define the thermal tolerance limits of the 3660 motor.
@@ -24,7 +24,7 @@ It shows the direct correlation between the chosen pinion size, the resulting me
   * 🟡 **sweet spot (22 % - 25 %):** optimal for speedruns, keep an eye on thermal limit.
   *  **Danger zone (> 25 %):** Acute risk of overheating, only for extreme short sprints.
 
-**Conclusion of the visualization:** The primary project goal of **100 km/h** is achieved from a **35T/36T pinion**. The wheel load is at this point still absolutely safe in the deep green zone. The setup offers mechanical reserves up to approx. 125 km/h.
+**Conclusion of the visualization (68T spur gear):** The primary project goal of **100 km/h** is achieved from a **34T pinion**. The wheel load is at this point (20.2 %) in the green zone. Within the 25 % limit, the setup offers mechanical reserves up to approx. 121 km/h (41T pinion). The current setup with a **43T pinion** is at **25.6 %** wheel load and therefore in the danger zone.
 
 
 ## The "wheel load %" formula
@@ -41,8 +41,8 @@ The smaller the FDR (i.e. the "taller" the gear ratio), the less leverage the mo
 2. **Calculate wheel load factor:**
    Wheel load (%) = (1 / FDR) * 100
 
-**Example:** With a 72T spur gear and a 36T pinion, the FDR is `(72 / 36) * 2.47 = 4.94`.
-The wheel load is thus `(1 / 4.94) * 100 = 20.2 %`.
+**Example:** With the 68T spur gear and the 43T pinion of the current setup, the FDR is `(68 / 43) * 2.47 = 3.91`.
+The wheel load is thus `(1 / 3.91) * 100 = 25.6 %`.
 
 ### The load zones (for 3650 motors / 4000kV on 3S)
 These zones have established themselves in practice as guide values for temperature and current monitoring:

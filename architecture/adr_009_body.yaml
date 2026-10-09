@@ -35,9 +35,6 @@ adr:
     required_thickness: 0.7 mm (Regular Weight)
   rationale: "The decision is made in favor of the ZooRacing Hellcat in the 0.7mm standard thickness. \nIt represents the \noptimal compromise between minimum air resistance (for \nreaching 100 km/h) and safe \ndownforce (prevention of blow-overs). Unlike very flat LMP bodies, \nit fits easily over \nthe shock towers of the Carten T410R. The material thickness of 0.7mm \nguarantees \nthat the body withstands the massive dynamic pressure at top speed and does not \nstart to vibrate or rub against the tires.\n"
   consequences:
-  - 'Painting: The body is supplied unpainted. Special
-    lexan paint (polycarbonate paint, e.g. Tamiya PS series) must be used, as normal
-    paint would flake off.'
   - 'Assembly: The included rear wing must be screwed on very rigidly. The
     body holes must be precisely machined with lexan scissors and a body reamer.'
   - 'Chassis preparation: The foam bumper on the front of the Carten T410R must

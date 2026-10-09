@@ -11,11 +11,11 @@
 
 | Component | weight |
 | :--- | :--- |
-| Vehicle with electronics (without battery) | 1.254 g |
+| Vehicle with electronics (without battery) | 1,254 g |
 | Battery | 391 g |
 | Body | 75 g |
 | GPS | 37 g |
-| **Total** | **1.757 g** |
+| **Total** | **1,757 g** |
 
 ## Weight distribution
 *without gps and body and with spool in front instead of differential
@@ -38,9 +38,11 @@
 ## Performance
 | Specification | value |
 | :--- | :--- |
-| Max. axle speed | 11,200 rpm |
 | Max. motor speed | 46,256 rpm |
-| Max. driveshaft speed | 27,625 rpm |
+| Max. axle speed | 11,840 rpm |
+| Max. driveshaft speed | 29,250 rpm |
 | Internal gear ratio | 2.47 |
-| Total gear ratio | 4.13 |
+| Total gear ratio (43T pinion / 68T spur gear) | 3.91 |
 | Battery | 3S (11.1V / 12.6V fully charged) |
+
+The max. motor speed is derived from the axle speed of 11,200 rpm measured in the RPM test on 2026-03-17 (former 43T/72T gearing, no load). Axle and driveshaft speeds are calculated from it for the current 43T/68T gearing.

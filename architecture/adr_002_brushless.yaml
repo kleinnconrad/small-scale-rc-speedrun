@@ -35,7 +35,7 @@ adr:
     esc_model: QuicRun WP10BL120 G2 (120A)
     motor_model: QuicRun 3660SL G2 (3700KV)
     type: Sensorless Brushless System (Waterproof IP67)
-  rationale: "The decision is made in favor of the Hobbywing QuicRun G2 Combo. It eliminates \nthe risk of failure of \nno-name motors and offers an optimally coordinated architecture (firmware of ESC \nand motor timing are optimally interlocked). \nThe 3660 motor delivers the perfect \nrpm with its 3700KV on 3S \n(approx. 41,000 rpm) and has enough torque due to the longer rotor \nto confidently handle \nthe calculated wheel load of approx. 24 %. This is the safest and \nmost efficient solution on a budget under 100 €.\n"
+  rationale: "The decision is made in favor of the Hobbywing QuicRun G2 Combo. It eliminates \nthe risk of failure of \nno-name motors and offers an optimally coordinated architecture (firmware of ESC \nand motor timing are optimally interlocked). \nThe 3660 motor delivers the perfect \nrpm with its 3700KV on 3S \n(approx. 41,000 rpm) and has enough torque due to the longer rotor \nto confidently handle \nthe calculated wheel load of approx. 25.6 % (43T pinion / 68T spur gear). \nThe combo is the safest and most efficient solution on a budget under 100 €. \nNote: 25.6 % is slightly above the 25 % guide value of the load model; \nthermal problems have not occurred in the tests so far.\n"
   consequences:
   - 'Packaging (Installation space): The 3660 motor is 10 mm longer than the standard size. The
     ESC and the receiver must be placed correspondingly further back in the T410R chassis.'

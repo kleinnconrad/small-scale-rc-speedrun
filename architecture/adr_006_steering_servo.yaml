@@ -3,7 +3,7 @@ adr:
   title: Selection of the steering servo for precise high-speed control
   status: decided
   date: '2026-08-21'
-  context: "At speeds of 100 km/h, enormous aerodynamic and mechanical \nforces act \non the front wheels of the Carten T410R. A minimal jitter, play \nor a too slow \nreaction time of the steering servo can immediately lead to loss of control \nand total failure. \nIn addition, space in a 1:10 touring car chassis \nis limited. Since our MVP remote control \n(Carson Reflex Wheel X1) does not have an electronic gyro, the servo must \nhold the \nstraight line mechanically very precisely and powerfully. A servo \nwith metal gears (robustness), \nhigh speed (~0.11s) and sufficient \ntorque (approx. 9 kg) is required.\n"
+  context: "At speeds of 100 km/h, enormous aerodynamic and mechanical forces act on the front wheels of the Carten T410R. A minimal jitter, play or a too slow reaction time of the steering servo can immediately lead to loss of control and total failure. In addition, space in a 1:10 touring car chassis is limited. The servo must hold the straight line precisely, return reproducibly to the neutral position and execute the counter-steering commands of the steering gyro (ADR-011) without delay. A low-profile servo with metal gears (robustness), high speed and a precise neutral return is required.\n"
   considered_alternatives:
   - option_id: 1
     name: Standard RTR / Plastic Gear Servo (3-6 kg)
@@ -20,21 +20,27 @@ adr:
   - option_id: 3
     name: Savöx SC-1251MG+
     type: Mid-Range / Low-Profile / Metal Gear
-    evaluation: The absolute gold standard in the 1:10 touring car sector. However, at approx. 55-65
-      € relatively expensive for our current budget MVP approach, even if the quality
-      and speed (0.09s) are outstanding.
+    evaluation: Proven low-profile servo of the same series and price class (approx. 55-65 €)
+      with high quality and a speed of 0.09s. Slower than the SC-1252MG+ (0.07s).
   - option_id: 4
     name: JX PDI-4409MG
     type: Budget / Low-Profile / Metal Gear
-    evaluation: An excellent price-performance ratio (~15-22 €). Offers a
-      robust metal gear, sufficient torque (9.2 kg) and a very good
-      reaction time (0.11s) in a space-saving low-profile design.
+    evaluation: Good price-performance ratio (~15-22 €) with a robust metal gear, a torque
+      of 9.2 kg and a reaction time of 0.11s in a space-saving low-profile design. Selected
+      for the MVP. Test drives showed that it did not reproducibly return to the neutral
+      position, so the steering precision was insufficient for speedruns.
+  - option_id: 5
+    name: Savöx SC-1252MG+
+    type: Mid-Range / Low-Profile / Metal Gear / Coreless
+    evaluation: Digital low-profile servo with coreless motor and metal gears. Speed of
+      0.07s, torque of 7 kg and a precise, reproducible return to the neutral position
+      (52.72 €).
   decision: Savöx SC-1252MG+
   servo_meta:
     brand: Savöx
     model: SC-1252MG+
     type: Digital Low-Profile Servo
-  rationale: "Test drives showed that the previous setup did not provide the required steering precision. The servo did not reproducibly return to the neutral position. Therefore, a change was made to the Savöx SC-1252MG+ (52.72 €). It offers a speed of 0.07s and a torque of 7 kg. This ensures a precise return to the neutral position.\n"
+  rationale: "Test drives with the MVP servo (JX PDI-4409MG) showed that the required steering precision was not reached, as the servo did not reproducibly return to the neutral position. The change to the Savöx SC-1252MG+ (52.72 €) was necessary to reach an appropriate steering precision. It offers a speed of 0.07s, a torque of 7 kg and a precise return to the neutral position. In addition, the mechanical resistance in the steering caused by overtightened C-hub mounting screws was eliminated (error log no. 14). Since test drive 13, corrective steering maneuvers can be executed effectively.\n"
   consequences:
   - 'Servo horn: To minimize play in the steering system, a rigid aluminum lever (ALU CLAMP SERVO HORN - FUTABA, SAVÖX - 3-HOLE - 25T, item HUD293409) is mounted without a servo saver.'
   - 'BEC voltage: The BEC output voltage of the controller is configured to 6.0V.'
